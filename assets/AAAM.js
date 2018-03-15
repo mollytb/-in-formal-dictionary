@@ -3,7 +3,16 @@ var oxfordCredentials = "2aa0189a"
 var oxfordBaseURL = "https://od-api.oxforddictionaries.com/api/v1"
 var urbanDictionaryKey = "e86PuErIxamshxX1NQoXzPi9BD9Sp1C1SgDjsnrfJoJR5BOft9"
 var urbanDictionaryBaseURL = "mashape-community-urban-dictionary.p.mashape.com"
+
+
 $(document).ready(function () {
+  //supposed node.js connect to urban dictionary
+  unirest.get("https://mashape-community-urban-dictionary.p.mashape.com/define?term=wat")
+  .header("X-Mashape-Key", "e86PuErIxamshxX1NQoXzPi9BD9Sp1C1SgDjsnrfJoJR5BOft9")
+  .header("X-Mashape-Host", "mashape-community-urban-dictionary.p.mashape.com")
+  .end(function (result) {
+    console.log(result.status, result.headers, result.body);
+  });
 
   // Initialize Firebase
   var config = {
