@@ -1,5 +1,8 @@
 console.log(12);
 var oxfordCredentials = "2aa0189a"
+var oxfordBaseURL = "https://od-api.oxforddictionaries.com/api/v1"
+var urbanDictionaryKey = "e86PuErIxamshxX1NQoXzPi9BD9Sp1C1SgDjsnrfJoJR5BOft9"
+var urbanDictionaryBaseURL = "mashape-community-urban-dictionary.p.mashape.com"
 $(document).ready(function () {
 
   // Initialize Firebase
