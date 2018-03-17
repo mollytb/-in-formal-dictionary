@@ -40,6 +40,17 @@ $(document).ready(function () {
     console.log(response);
     console.log(response.list[0].definition);
   });
-  
+  var tbody = $("#tableBody");
+  // Create and save a reference to new empty table row
+var row = $("<tr>");   
+  // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+var tdDefinition = $("<td>");
+tdDefinition.text(response);  
+  // Append the td elements to the new table row
+row.append(tdDefinition);
+
+  // Append the table row to the tbody element
+tbody.append(row);
+});
   //ready document close function tokens
 });

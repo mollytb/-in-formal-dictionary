@@ -13,64 +13,75 @@
     <script src="assets/AAAM.js"></script>
 
     <style>
-    .definition {
-        margin-left: 15px;
-        max-width: 40%;
-    }
-	.card {
-        margin-left: 150px;
-        background-color: orange;
-    }
-    </style>
+
+        #button1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+        }
+        
+        label, .form-control, #button1 {
+            margin-left: 20px;
+            max-width: 50%;
+            border-width: 5px;
+        }
+        
+        </style>
 
 </head>
 
-<body>
+<body> 
     <div class="jumbotron">
         <h1 class="display-4">(in)formal definitions</h1>
         <p class="lead">You know what they taught you in school. Educate yourself on what the real world thinks.</p>
         <hr class="my-4">
         <p>Type a word in the box below and hit Submit.</p> 
-        <p>On the left side you will get the Merriam Webster (nerd) defintion.</p> 
-        <p>On the right, you will get the cool kid definition.</p>
+        <p>On the left side you will get the Dictionary.com (nerd) defintion.</p> 
+        <p>On the right, you will get the cool kid definition from Urban Dictionary.</p>
     </div>
     </br>
-    <form>
+
+    
         <div class="definition">
-            <label for="word-definition">Type a word!</label>
+            <label for="word-definition"><h4>Type a word!</h4></label>
             <input type="word" class="form-control" id="word definition" placeholder="">
             </br>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
+            <a id="button1" href="#" role="button">Submit</a>
         </div>
-    </form>
     </br>
-    <!--<div class="container"> -->
-    <div class="row">
-        <div class="col-5">
-        <div class="card" style="width: 45rem;">
-            <div class="card-header">
-                Oxford Dictionary Definition
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-5">
-        <div class="card" style="width: 45rem;">
-            <div class="card-header">
-                Urban Dictionary Definition
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-        </div>
-    </div>
-</body>
 
+<div class="container">
+       <div class="row">
+        <div class="col-6">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Dictionary.com Definition</th>
+                </tr>
+            </thead>
+        <tbody id="tableBody">
+        </tbody>
+        </table>
+</div>
+
+
+<div class="col-6">
+        <table class="table">
+            <thead class="table">
+                <tr>
+                    <th>Urban Dictionary Definition</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody2">
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</body>
 </html>
