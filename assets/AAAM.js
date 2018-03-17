@@ -43,7 +43,7 @@ $(document).ready(function () {
   var term = $("#term").val().trim();
   console.log(term);
   $.ajax({
-    url: "http://api.urbandictionary.com/v0/define?term="+ term,
+    url: "https://api.urbandictionary.com/v0/define?term="+ term,
     method: "GET"
   }).then(function (response) {
     console.log(term);
