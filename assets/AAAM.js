@@ -51,6 +51,6 @@ row.append(tdDefinition);
 
   // Append the table row to the tbody element
 tbody.append(row);
-});
+
   //ready document close function tokens
 });
