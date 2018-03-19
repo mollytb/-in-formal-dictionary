@@ -2,91 +2,123 @@
 <html>
 
 <head>
-    <title>Project 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <meta charset="UTF-8">
-    <title>title</title>
+  <title>(in)formal dictionary</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <script src="assets/AAAM.js"></script>
-
-    <style>
-        #button1 {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-        }
-
-        label,
-        .form-control,
-        #button1 {
-            margin-left: 20px;
-            max-width: 50%;
-            border-width: 5px;
-        }
-    </style>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script src="assets/javascript/AAAM.js"></script>
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">(in)formal definitions</h1>
-        <p class="lead">You know what they taught you in school. Educate yourself on what the real world thinks.</p>
-        <hr class="my-4">
-        <p>Type a word in the box below and hit Submit.</p>
-        <p>On the left side you will get the Dictionary.com (nerd) defintion.</p>
-        <p>On the right, you will get the cool kid definition from Urban Dictionary.</p>
+
+  <div class="bigImg-1">
+    <div class="caption" data-aos="fade-down" data-aos-duration="2000">
+      <span class="border">(in)formal dictionary</span>
     </div>
-    </br>
+    <div class="scroll">
+    <img src="assets/images/scroll.png">
+  </div>
+  </div>
+  <div class="explain">
+    <h3 data-aos="zoom-in" data-aos-duration="2000">The Best of Both Worlds</h3>
+    <p data-aos="zoom-in" data-aos-duration="1500">Type a word in the box and get definitions from both the Oxford and Urban dictionary API's</p>
+  </div>
 
-
-    <form>
-        <div class="definition">
-            <label for="word-definition">Type a word!</label>
-            <input type="text" class="form-control" id="term" placeholder="">
-            </br>
-            <button class="btn btn-primary btn-lg" id="button1" type="submit">Submit</button>
-        </div>
-    </form>
-
-    </br>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Dictionary.com Definition</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody">
-                    </tbody>
-                </table>
-            </div>
-
-
-            <div class="col-6">
-                <table class="table">
-                    <thead class="table">
-                        <tr>
-                            <th>Urban Dictionary Definition</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody2">
-                    </tbody>
-                </table>
-            </div>
-        </div>
+  <div class="bigImg-2">
+    <div class="caption" data-aos="fade-up" data-aos-duration="2000">
+      <span class="border border-0" style="background-color:transparent;font-size:25px;color:#f7f7f7; text-shadow:-1px -1px #000">TYPE A WORD</span>
     </div>
+  </div>
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <div class="form-group">
+      <form>
+        <input type="text" class="form-control" id="term" placeholder="Type word here" data-aos="fade-right" data-aos-duration="2500">
+        </br>
+        <button class="btn btn-primary btn-lg btn-block" id="button1" type="submit" data-aos="fade-left" data-aos-duration="2000">Search Dictionaries</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="bigImg-3">
+    <div class="container" style="padding-top:20px;">
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up-right" data-aos-duration="1500">
+          <table class="table">
+            <thead class="table">
+              <tr>
+                <th>Oxford Dictionaries Definition</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-up-left" data-aos-duration="1500">
+          <table class="table">
+            <thead class="table">
+              <tr>
+                <th>Urban Dictionary Definition</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody2">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bigImg-4">
+    <div class="collabCap" data-aos="fade-right">
+      <span class="border border-0">Project Collaborators</span>
+      </div>
+      <br>
+      <div class="container">
+        <div class="row justify-content-around" data-aos="fade-down-right" data-aos-duration="1000">
+          <div class="col">
+            <a href="http://www.andrewrmancuso.com/" target="_blank">
+            <h3 class="collaborators rounded">A.R. Mancuso</h3>
+          </a>
+          </div>
+          <div class="col">
+            <a href="https://github.com/mollytb" target="_blank">
+            <h3 class="collaborators rounded">Molly Burns</h3>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+      <div class="row justify-content-around" data-aos="fade-down-left" data-aos-duration="1000">
+        <div class="col">
+          <a href="" target="_blank">
+          <h3 class="collaborators rounded">Alex Subak</h3>
+        </a>
+        </div>
+        <div class="col">
+          <a href="" target="_blank">
+          <h3 class="collaborators rounded">Anna Wolf</h3>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/javascript/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+  AOS.init({
+    disable: 'mobile'
+  });
+</script>
 </body>
 
 </html>

@@ -1,0 +1,154 @@
+#button1 {
+  background: #CF4647;
+  border: 0;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+#button1:hover {
+  background: #4CAF50;
+}
+
+label, .form-control, #button1 {
+  text-align: center;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #777;
+}
+
+h3, p {
+  text-align: center;
+
+}
+.bigImg-1, .bigImg-2, .bigImg-3, .bigImg-4 {
+  position: relative;
+  opacity: 0.70;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bigImg-1 {
+  background-image: url("../images/books.jpg");
+  min-height: 100%;
+}
+
+.bigImg-2 {
+  background-image: url("../images/book-open-pages.jpeg");
+  min-height: 400px;
+}
+
+.bigImg-3 {
+  background-image: url("../images/stacks.jpeg");
+  min-height: 100%;
+}
+
+.bigImg-4 {
+  background-image: url("../images/bookfoot.jpeg");
+  min-height: 75%;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.explain {
+  color: #777;
+  background-color:white;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 7px;
+}
+
+.collabCap {
+  position: relative;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.collabCap span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 7px;
+}
+
+.collaborators {
+  font-size: 50px;
+  position: relative;
+  color: #66C7C7;
+  background-color: grey;
+  opacity: .85;
+  text-shadow: 1px 1px #457FBA;
+  margin-top: 50px;
+  margin-bottom:10px;
+  transition: all 0.3s ease 0s;
+}
+
+.collaborators:hover {
+  transform: perspective(1000px) translate3d(0,0,60px);
+  background: #EFEFEF;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  ...
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  ...
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  ...
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  ...
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .bigImg-1, .bigImg-2, .bigImg-3, .bigImg-4 {
+        background-attachment: scroll;
+    }
+}
