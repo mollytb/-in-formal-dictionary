@@ -2,10 +2,8 @@
   background: #CF4647;
   border: 0;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 20px;
   transition: all 0.3s ease 0s;
 }
@@ -75,14 +73,14 @@ h3, p {
 
 .caption {
   position: absolute;
-  left: 0;
   top: 50%;
   width: 100%;
   text-align: center;
   color: #000;
+
 }
 
-.caption span.border {
+.caption p.border {
   background-color: #111;
   color: #fff;
   padding: 18px;
@@ -100,7 +98,7 @@ h3, p {
   margin-bottom: 50px;
 }
 
-.collabCap span.border {
+.collabCap p.border {
   background-color: #111;
   color: #fff;
   padding: 18px;
