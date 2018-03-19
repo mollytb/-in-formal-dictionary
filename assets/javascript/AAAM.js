@@ -20,37 +20,38 @@ $(document).ready(function () {
 
   $("#button1").on("click", function(){
     event.preventDefault();
-    console.log(term);
-
+    
+    
     var term1 = $("#term").val().trim();
     console.log(term1);
-  $.ajax({
-
-    headers: {
-      accept: "application/json",
-      app_id: "2aa0189a",
-      app_key: "ae54f1dd060d103e0947e768e0963bba"
-    },
-    url: "https://cors-anywhere.herokuapp.com/https://od-api.oxforddictionaries.com/api/v1/entries/en/"+ term1,
-    method: "GET"
-  }).then(function (response) {
-    console.log(term1);
-    console.log(response);
-    console.log(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
-
-  })
-  var term = $("#term").val().trim();
-  console.log(term);
-  $.ajax({
-    url: "https://api.urbandictionary.com/v0/define?term="+ term,
-    method: "GET"
-  }).then(function (response) {
+    $.ajax({
+      
+      headers: {
+        accept: "application/json",
+        app_id: "2aa0189a",
+        app_key: "ae54f1dd060d103e0947e768e0963bba"
+      },
+      url: "https://cors-anywhere.herokuapp.com/https://od-api.oxforddictionaries.com/api/v1/entries/en/"+ term1,
+      method: "GET"
+    }).then(function (response) {
+      console.log(term1);
+      console.log(response);
+      console.log(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+      
+    })
+    var term = $("#term").val().trim();
     console.log(term);
-    console.log(response);
-    console.log(response.list[0].definition);
-    
+    $.ajax({
+      url: "https://api.urbandictionary.com/v0/define?term="+ term,
+      method: "GET"
+    }).then(function (response) {
+      console.log(term);
+      console.log(response);
+      console.log(response.list[0].definition);
+      
+    });
+    $("#term").val("");
   });
-});
 
   //var tbody = $("#tableBody");
   //// Create and save a reference to new empty table row
