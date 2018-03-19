@@ -39,7 +39,7 @@
   </div>
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
     <div class="form-group">
-      <form>
+      <form autocomplete="off">
         <input type="text" class="form-control" id="term" placeholder="Type word here" data-aos="fade-right" data-aos-duration="2500">
         </br>
         <button class="btn btn-primary btn-lg btn-block" id="button1" type="submit" data-aos="fade-left" data-aos-duration="2000">Search Dictionaries</button>
@@ -51,27 +51,31 @@
     <div class="container" style="padding-top:20px;">
       <div class="row">
         <div class="col-md-6" data-aos="fade-up-right" data-aos-duration="1500">
-          <table class="table">
+          <div class="card">
+          <table class="table" id="tableBody">
             <thead class="table">
               <tr>
                 <th class="text-center">Oxford Dictionaries Definition</th>
               </tr>
             </thead>
-            <tbody id="tableBody">
+            <tbody>
             </tbody>
           </table>
+          </div>
         </div>
+        <div class="card">
 
         <div class="col-md-6" data-aos="fade-up-left" data-aos-duration="1500">
-          <table class="table">
+          <table  id="tableBody2" class="table">
             <thead class="table">
               <tr>
                 <th class="text-center">Urban Dictionary Definition</th>
               </tr>
             </thead>
-            <tbody id="tableBody2">
+            <tbody>
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div>

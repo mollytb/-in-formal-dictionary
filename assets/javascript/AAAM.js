@@ -18,52 +18,66 @@ $(document).ready(function () {
   };
   firebase.initializeApp(config);
 
-  $("#button1").on("click", function(){
+  $("#button1").on("click", function () {
     event.preventDefault();
-    
-    
-    var term1 = $("#term").val().trim();
-    console.log(term1);
+
+
+    var term = $("#term").val().trim();
+    console.log(term);
     $.ajax({
-      
+
       headers: {
         accept: "application/json",
         app_id: "2aa0189a",
         app_key: "ae54f1dd060d103e0947e768e0963bba"
       },
-      url: "https://cors-anywhere.herokuapp.com/https://od-api.oxforddictionaries.com/api/v1/entries/en/"+ term1,
-      method: "GET"
-    }).then(function (response) {
-      console.log(term1);
-      console.log(response);
-      console.log(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
-      
-    })
-    var term = $("#term").val().trim();
-    console.log(term);
-    $.ajax({
-      url: "https://api.urbandictionary.com/v0/define?term="+ term,
+      url: "https://cors-anywhere.herokuapp.com/https://od-api.oxforddictionaries.com/api/v1/inflections/en/" + term,
       method: "GET"
     }).then(function (response) {
       console.log(term);
       console.log(response);
-      console.log(response.list[0].definition);
-      
+      console.log(response.results[0].lexicalEntries[0].inflectionOf[0].text);
+     var rootTerm = response.results[0].lexicalEntries[0].inflectionOf[0].text;
+     
+      $.ajax({
+
+        headers: {
+          accept: "application/json",
+          app_id: "2aa0189a",
+          app_key: "ae54f1dd060d103e0947e768e0963bba"
+        },
+        url: "https://cors-anywhere.herokuapp.com/https://od-api.oxforddictionaries.com/api/v1/entries/en/" + rootTerm,
+        method: "GET"
+      }).then(function (response) {
+        console.log(term);
+        console.log(response);
+        console.log(response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]);
+        var oxDef = response.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0];
+        //oxford table write to dom
+        $("#tableBody > tbody").prepend("<tr><td>" + term + "</td><td>" + oxDef + "</td><td>");
+      })
     });
-    $("#term").val("");
+      //var term = $("#term").val().trim();
+      console.log(term);
+      $.ajax({
+        url: "https://api.urbandictionary.com/v0/define?term=" + term,
+        method: "GET"
+      }).then(function (response) {
+        console.log(term);
+        console.log(response);
+        console.log(response.list[0].definition);
+        var urbDef = response.list[0].definition;
+        //urban table write to dom
+        $("#tableBody2 > tbody").prepend("<tr><td>" + term + "</td><td>" + urbDef + "</td><td>");
+      });
+      
+
+      $("#term").val("");
+    });
+
+   
+
+
+  
+    //ready document close function tokens
   });
-
-  //var tbody = $("#tableBody");
-  //// Create and save a reference to new empty table row
-  //var row = $("<tr>");
-  //// Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
-  //var tdDefinition = $("<td>");
-  //tdDefinition.text(response);
-  //// Append the td elements to the new table row
-  //row.append(tdDefinition);
-//
-  //// Append the table row to the tbody element
-  //tbody.append(row);
-
-  //ready document close function tokens
-});
