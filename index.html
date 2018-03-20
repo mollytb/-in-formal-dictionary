@@ -41,8 +41,11 @@
     <div class="form-group">
       <form autocomplete="off">
         <input type="text" class="form-control" id="term" placeholder="Type word here" data-aos="fade-right" data-aos-duration="2500">
-        </br>
-        <button class="btn btn-primary btn-lg btn-block" id="button1" type="submit" data-aos="fade-left" data-aos-duration="2000">Search Dictionaries</button>
+      </br>
+      <div class="button-group text-center">
+        <button class="btn btn-lg" id="button1" type="submit" data-aos="fade-left" data-aos-duration="5000">Search Dictionaries</button>
+        <button class="btn btn-lg" id="button2" data-aos="fade-right" data-aos-duration="1000">Clear Results</button>
+      </div>
       </form>
     </div>
   </div>
@@ -53,14 +56,15 @@
         <div class="col-md-6" data-aos="fade-up-right" data-aos-duration="1500">
           <div class="card">
             <div class "card-heading">
-              <h2 class="cart-title"><strong>Oxford Dictionaries Definition</strong></h2>
+              <h2 class="cart-title"><strong>Oxford Dictionaries</strong></h2>
               <table class="table" id="tableBody">
                 <thead class="table">
                   <tr>
                     <th class="text-center">Your Search Term</th>
+                    <th class="text-center">Definition</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="data1">
                 </tbody>
               </table>
             </div>
@@ -70,14 +74,15 @@
         <div class="col-md-6" data-aos="fade-up-left" data-aos-duration="1500">
           <div class="card">
             <div class "card-heading">
-              <h2 class="cart-title"><strong>Urban Dictionaries Definition</strong></h2>
-              <table id="tableBody2" class="table">
+              <h2 class="cart-title"><strong>Urban Dictionary</strong></h2>
+              <table class="table" id="tableBody2">
                 <thead class="table">
                   <tr>
                     <th class="text-center">Your Search Term</th>
+                    <th class="text-center">Definition</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="data2">
                 </tbody>
               </table>
             </div>

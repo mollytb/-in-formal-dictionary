@@ -12,6 +12,20 @@
   background: #4CAF50;
 }
 
+#button2 {
+  background: #CF4647;
+  border: 0;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+#button2:hover {
+  background: #4CAF50;
+}
+
 label, .form-control, #button1 {
   text-align: center;
 }
