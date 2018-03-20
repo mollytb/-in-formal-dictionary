@@ -25,8 +25,13 @@ body, html {
 
 h3, p {
   text-align: center;
-
 }
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
 .bigImg-1, .bigImg-2, .bigImg-3, .bigImg-4 {
   position: relative;
   opacity: 0.70;

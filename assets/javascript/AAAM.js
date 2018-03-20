@@ -38,7 +38,7 @@ $(document).ready(function () {
       console.log(response);
       console.log(response.results[0].lexicalEntries[0].inflectionOf[0].text);
      var rootTerm = response.results[0].lexicalEntries[0].inflectionOf[0].text;
-     
+
       $.ajax({
 
         headers: {
@@ -70,14 +70,14 @@ $(document).ready(function () {
         //urban table write to dom
         $("#tableBody2 > tbody").prepend("<tr><td>" + term + "</td><td>" + urbDef + "</td><td>");
       });
-      
+
 
       $("#term").val("");
     });
 
-   
 
 
-  
+
+
     //ready document close function tokens
   });
