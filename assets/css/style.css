@@ -1,6 +1,7 @@
 #button1 {
   background: #CF4647;
   border: 0;
+  margin: 10px;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -54,7 +55,9 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.card {
+  margin: 10px;
+}
 .bigImg-1 {
   background-image: url("../images/books.jpg");
   min-height: 100%;
